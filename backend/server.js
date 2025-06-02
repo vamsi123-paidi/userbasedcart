@@ -8,7 +8,7 @@ const cartRoutes = require("./routes/cartRoutes");
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({ origin: "https://userbasedcart.vercel.app/", credentials: true }));
+app.use(cors({ origin: "https://userbasedcart.vercel.app", credentials: true }));
 
 mongoose.connect("mongodb+srv://vamsipaidi251002:root@cluster0.57x80oa.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
     .then(() => console.log("MongoDB Connected"))
