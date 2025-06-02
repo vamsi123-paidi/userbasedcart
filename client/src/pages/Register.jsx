@@ -10,7 +10,7 @@ function Register() {
 
     const handleSubmit = async e => {
         e.preventDefault();
-        await axios.post("http://localhost:5000/api/auth/register", user, { withCredentials: true });
+        await axios.post("https://userbasedcart.onrender.com/api/auth/register", user, { withCredentials: true });
         navigate("/login");
     };
 

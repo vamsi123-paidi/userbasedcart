@@ -20,7 +20,7 @@ function Dashboard() {
     }, [user]);
 
     const handleAddToCart = (item) => {
-        axios.post("http://localhost:5000/api/cart", item, { withCredentials: true })
+        axios.post("https://userbasedcart.onrender.com/api/cart", item, { withCredentials: true })
             .then(() => alert("Item added to cart"))
             .catch((err) => console.error("Add to cart error:", err));
     };
@@ -31,7 +31,7 @@ function Dashboard() {
 
     const handleProfileUpdate = (e) => {
         e.preventDefault();
-        axios.put("http://localhost:5000/api/auth/update", formData, {
+        axios.put("https://userbasedcart.onrender.com/api/auth/update", formData, {
             withCredentials: true,
         })
             .then(res => {

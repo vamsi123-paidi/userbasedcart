@@ -16,12 +16,12 @@ function Login() {
 
         try {
             // Login request
-            await axios.post("http://localhost:5000/api/auth/login", user, {
+            await axios.post("https://userbasedcart.onrender.com/api/auth/login", user, {
                 withCredentials: true,
             });
 
             // Fetch current user after login
-            const res = await axios.get("http://localhost:5000/api/auth/me", {
+            const res = await axios.get("https://userbasedcart.onrender.com/api/auth/me", {
                 withCredentials: true,
             });
 

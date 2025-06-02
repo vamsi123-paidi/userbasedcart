@@ -10,7 +10,7 @@ function Cart() {
 
     const fetchCart = () => {
         axios
-            .get("http://localhost:5000/api/cart", { withCredentials: true })
+            .get("https://userbasedcart.onrender.com/api/cart", { withCredentials: true })
             .then((res) => setCartItems(res.data))
             .catch((err) => console.error("Cart error:", err));
     };
@@ -20,7 +20,7 @@ function Cart() {
 
     const clearCart = async () => {
         try {
-            await axios.delete("http://localhost:5000/api/cart", {
+            await axios.delete("https://userbasedcart.onrender.com/api/cart", {
                 withCredentials: true,
             });
             setCartItems([]);

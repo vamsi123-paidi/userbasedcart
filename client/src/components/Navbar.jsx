@@ -8,7 +8,7 @@ function Navbar() {
     const navigate = useNavigate();
 
     const handleLogout = () => {
-        axios.post("http://localhost:5000/api/auth/logout", {}, { withCredentials: true })
+        axios.post("https://userbasedcart.onrender.com/api/auth/logout", {}, { withCredentials: true })
             .then(() => {
                 setUser(null);
                 navigate("/login");

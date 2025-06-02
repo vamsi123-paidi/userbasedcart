@@ -9,7 +9,7 @@ export const UserProvider = ({ children }) => {
 
   // Fetch current user on load
   useEffect(() => {
-    axios.get("http://localhost:5000/api/auth/me", { withCredentials: true })
+    axios.get("https://userbasedcart.onrender.com/api/auth/me", { withCredentials: true })
       .then(res => setUser(res.data))
       .catch(() => setUser(null));
   }, []);
